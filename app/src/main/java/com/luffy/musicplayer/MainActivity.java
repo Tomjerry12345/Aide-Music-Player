@@ -10,7 +10,7 @@ import android.graphics.*;
 
 public class MainActivity extends Activity 
 {
-	MediaPlayer mediaPlayer;
+    MediaPlayer mediaPlayer;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -39,16 +39,11 @@ public class MainActivity extends Activity
 		
     }
 	
-	public void musicPlayer() {
-
-	  CircleBarVisualizer circleVisualizer = findViewById(R.id.visualizer);
-	  mediaPlayer = MediaPlayer.create(this, R.raw.music);
-		
-      circleVisualizer.setColor(Color.parseColor("#000000"));
- 
-      circleVisualizer.setPlayer(mediaPlayer.getAudioSessionId());
-		
-		
-		}
+    public void musicPlayer() {
+    	CircleBarVisualizer circleVisualizer = findViewById(R.id.visualizer);
+	mediaPlayer = MediaPlayer.create(this, R.raw.music);
+	circleVisualizer.setColor(Color.parseColor("#000000"));
+	circleVisualizer.setPlayer(mediaPlayer.getAudioSessionId());	
+    }
 	
 }
